@@ -1,0 +1,563 @@
+/* Font Import */
+@font-face {
+    font-family: 'Magilio';
+    src: url('fonts/MagilioRegular-Yzv2O.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #fdf6e3;
+    color: #333;
+}
+
+/* Titles Styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Magilio', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Welcome Page Styles */
+.welcome-container {
+    position: relative;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.large-nav-icon {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    transition: transform 1s, top 1s, left 1s, width 1s, height 1s;
+}
+
+.large-nav-icon:hover {
+    transform: rotate(-5deg);
+}
+
+.overlay-text-welcome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Magilio', sans-serif;
+    font-size: 36px;
+    color: #333;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Animation for moving nav icon to top left */
+.move-to-top-left {
+    position: fixed !important;
+    top: 10px !important;
+    left: 10px !important;
+    width: 95px !important;
+    height: 95px !important;
+    transform: rotate(360deg) !important;
+}
+
+/* Navigation Icon Styles */
+.nav-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.small-nav-icon {
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+
+.nav-icon img {
+    transition: transform 0.5s;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 55px;
+    list-style: none;
+    margin: 0;
+    padding: 30;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+}
+
+/* Bubble Menu Styles */
+.nav-menu li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #fdebd0; 
+    border-radius: 25px;
+    color: #333;
+    white-space: nowrap; 
+}
+
+.nav-menu li a:hover {
+    background-color: #fbd6a1; 
+}
+
+/* Show menu on hover */
+.nav-icon:hover .nav-menu {
+    display: block;
+}
+
+/* Icon Spin on Hover  */
+.nav-icon img.spinning {
+    transform: rotate(360deg);
+}
+
+/* Section Styles */
+.section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.section-content {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.section-content h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #fff;
+}
+
+/* Content Section Styles */
+.content-section {
+    padding: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.about-content .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Project Item */
+.project-item {
+    flex: 1 1 calc(33.333% - 40px); /* Up to 3 items per row */
+    box-sizing: border-box;
+    max-width: calc(33.333% - 40px);
+    background-color: #fdf6e3;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-item h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #fdebd0;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    background-color: #fbd6a1;
+}
+
+/* School section */
+.education-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #666;
+}
+
+.education-intro a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-item {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.course-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.course-link {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.course-link:hover {
+    text-decoration: underline;
+}
+
+.class-item.expanded .class-details {
+    display: block;
+}
+
+.class-item.expanded .toggle-button {
+    transform: rotate(45deg);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 0;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #fdebd0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item .timeline-content {
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline-item .date {
+    font-size: 14px;
+    color: #999;
+}
+
+.timeline-item h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.timeline-item p {
+    color: #666;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline-item {
+        padding: 20px 30px;
+    }
+    .timeline-item::after {
+        left: 31px;
+    }
+    .timeline-item .timeline-content {
+        margin-left: 60px;
+    }
+}
+
+/* About section */
+.icon-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skills-section,
+.certifications-section {
+    margin-bottom: 40px;
+}
+
+.skills-container,
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-item,
+.certification-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+.skill-item img,
+.certification-item img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 5px;
+}
+.certifications-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+}
+
+.certification-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; 
+    justify-content: flex-start;
+    padding: 10px 0;
+}
+
+.certification-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.certification-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+}
+
+.about-text {
+    max-width: 500px;
+    color: #333;
+}
+
+/* Inspiration Sections */
+.inspiration-sections {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.books-section, .authors-section {
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+.books-container, .authors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-item, .author-item {
+    width: calc(50% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.book-item img, .author-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book-item h3, .author-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.book-item p, .author-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .inspiration-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+    .books-section, .authors-section {
+        max-width: 100%;
+    }
+    .book-item, .author-item {
+        width: 100%;
+    }
+}
+
+/* Work Container */
+.work-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.work-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.company-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.work-details h2 {
+    margin: 0 0 5px;
+    font-size: 24px;
+    color: #333;
+}
+
+.work-details .date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.work-details ul {
+    padding-left: 20px;
+    color: #666;
+}
+
+.work-details ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-content a {
+    margin: 0 15px;
+}
+
+.footer-content img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.footer-content img:hover {
+    transform: scale(1.1);
+}

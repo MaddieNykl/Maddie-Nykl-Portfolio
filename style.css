@@ -228,7 +228,7 @@ a {
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
-    gap: 10px;
+    gap: 30px;
     justify-content: center;
     margin: 0 auto;
 }
@@ -236,11 +236,16 @@ a {
 .skill-item {
     font-size: 12px;
     align-items: center;
+    padding: 20px;
 }
 
-.skill-item img {
-    margin-bottom: 5px;
-    height: 30px;
+.wide-image {
+    width: 90px;
+    height: auto;
+}
+
+.tall-image {
+    height: 50px;
     width: auto;
 }
 
@@ -250,7 +255,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 30px;
 }
 
 .certification-item {

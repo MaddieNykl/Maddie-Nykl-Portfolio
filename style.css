@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icon-title {
-    text-align: left;
+    text-align: center;
 }
 
 a {
@@ -158,6 +158,57 @@ a {
     transform: rotate(360deg);
 }
 
+/* Photo Credits Style */
+.camera-icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.camera-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.camera-icon:hover {
+    transform: scale(1.2);
+}
+
+.image-credits-bubble {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background-color: #fdebd0;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+    white-space: normal;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #333;
+    width: 250px;
+    max-width: 300px;
+}
+
+.camera-icon-container:hover .image-credits-bubble {
+    display: block;
+}
+
+.image-credits-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #fdebd0 transparent transparent transparent;
+}
+
 /* About page styles */
 .about-content {
     display: flex;
@@ -169,8 +220,8 @@ a {
 }
 
 .about-content .headshot {
-    width: 220px;
-    height: 220px;
+    width: 290px;
+    height: 290px;
     border-radius: 50%;
     object-fit: cover;
     padding: 20px;
@@ -524,6 +575,9 @@ footer {
     }
     .course-item {
         max-width: 100%;
+    }
+    .camera-icon-container {
+        display: none;
     }
 }
 

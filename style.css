@@ -12,7 +12,7 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
-    background-color: #fdf6e3;
+    background-color: white;
     color: #333;
 }
 
@@ -164,19 +164,24 @@ a {
 
 .about-content {
     display: flex;
-    align-items: center;
-    max-width: 800px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+    border-radius: 8px;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
 .about-content .headshot {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
-    padding: 10px;
+    padding: 20px;
+    margin-left: 30px;
+
 }
+
 
 /* Projects Container */
 .projects-container {
@@ -188,27 +193,13 @@ a {
 
 /* Project Item */
 .project-item {
-    flex: 1 1 calc(33.333% - 40px); /* Up to 3 items per row */
+    flex: 1 1 calc(33.333% - 40px); 
     box-sizing: border-box;
     max-width: calc(33.333% - 40px);
     background-color: #fdf6e3;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .project-item {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .project-item {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
 }
 
 .project-image {
@@ -356,65 +347,90 @@ a {
     color: #666;
 }
 
-@media screen and (max-width: 600px) {
-    .timeline-item {
-        padding: 20px 30px;
-    }
-    .timeline-item::after {
-        left: 31px;
-    }
-    .timeline-item .timeline-content {
-        margin-left: 60px;
-    }
+/* About and Certifications Section */
+.about-certifications-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
-/* About section */
-.icon-title {
-    text-align: center;
-    margin-bottom: 10px;
+/* About Me Section */
+.about-content {
+    flex: 1;
 }
 
-.skills-section,
+/* Certifications Section */
 .certifications-section {
-    margin-bottom: 40px;
-}
-
-.skills-container,
-.certifications-container {
+    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.skill-item,
-.certification-item {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    max-width: 100px;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;  
+    margin-right: auto;
 }
 
-.skill-item img,
-.certification-item img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 5px;
-}
+/* Certifications Container */
 .certifications-container {
-    display: flex;
-    flex-direction: column; 
+    width: 100%;
+}
+
+/* Icon Title */
+.icon-title {
+    text-align: left;
+}
+
+/* Skills Section */
+.skills-section {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Skill Item */
+.skill-item {
+    font-size: 12px;
     align-items: center;
-    gap: 20px;
+}
+
+/* Skill Item Image */
+.skill-item img {
+    margin-bottom: 5px;
+    height: 30px;
+    width: auto;
+}
+
+/* Certifications Container */
+.certifications-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .certification-item {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     justify-content: flex-start;
-    padding: 10px 0;
+    
 }
 
 .certification-item img {
@@ -428,15 +444,16 @@ a {
     color: #333;
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    max-width: 800px;
-}
-
+/* About Text */
 .about-text {
-    max-width: 500px;
+    max-width: 600px; 
     color: #333;
+    padding: 10px; 
+    margin: 0 auto; 
+}
+.about-text p {
+    font-size: 16px; 
+    line-height: 1.6; 
 }
 
 /* Inspiration Sections */
@@ -484,19 +501,6 @@ a {
     color: #666;
 }
 
-@media screen and (max-width: 768px) {
-    .inspiration-sections {
-        flex-direction: column;
-        align-items: center;
-    }
-    .books-section, .authors-section {
-        max-width: 100%;
-    }
-    .book-item, .author-item {
-        width: 100%;
-    }
-}
-
 /* Work Container */
 .work-container {
     max-width: 800px;
@@ -538,7 +542,7 @@ a {
 
 /* Footer */
 footer {
-    background-color: #f8f8f8;
+    background-color: #fdf6e3;
 }
 
 .footer-content {
@@ -560,4 +564,75 @@ footer {
 
 .footer-content img:hover {
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 480px) {
+    .project-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline-item {
+        padding: 20px 30px;
+    }
+    .timeline-item::after {
+        left: 31px;
+    }
+    .timeline-item .timeline-content {
+        margin-left: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+    .inspiration-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+    .books-section, .authors-section {
+        max-width: 100%;
+    }
+    .book-item, .author-item {
+        width: 100%;
+    }
+    .about-content {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .project-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+    .inspiration-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+    .books-section, .authors-section {
+        max-width: 100%;
+    }
+    .book-item, .author-item {
+        width: 100%;
+    }
+    .headshot {
+        margin-bottom: 20px;
+    }
+    .about-text {
+        text-align: center;  
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-certifications-container {
+        flex-direction: column; 
+        align-items: center;   
+    }
+
+    .certifications-section {
+        margin-top: 20px;  
+    }
 }

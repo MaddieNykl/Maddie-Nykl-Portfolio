@@ -514,9 +514,15 @@ a {
 }
 
 .company-logo {
-    width: 80px;
+    width: 150px;
     height: auto;
     margin-right: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-logo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .work-details h2 {
@@ -566,7 +572,7 @@ footer {
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
     .project-item {
         flex: 1 1 100%;
         max-width: 100%;
@@ -582,6 +588,21 @@ footer {
     }
     .timeline-item .timeline-content {
         margin-left: 60px;
+    }
+    .work-item {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .company-logo {
+        margin-bottom: 15px;
+        width: 200px;
+        max-width: 100%;
+    }
+
+    .work-details {
+        margin-top: 10px;
     }
 }
 

@@ -29,14 +29,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Toggle Class Details
-document.addEventListener('DOMContentLoaded', function() {
-    var classHeaders = document.querySelectorAll('.class-header');
-
-    classHeaders.forEach(function(header) {
-        header.addEventListener('click', function() {
-            var classItem = header.parentElement;
-            classItem.classList.toggle('expanded');
-        });
-    });
-});

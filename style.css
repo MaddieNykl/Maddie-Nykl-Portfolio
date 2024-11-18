@@ -16,14 +16,43 @@ body, html {
     color: #333;
 }
 
-/* Titles Styling */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Magilio', sans-serif;
+}
+
+.icon-title {
+    text-align: left;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.section-content {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.section-content h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #fff;
+}
+
+.content-section {
+    padding: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 /* Welcome Page Styles */
@@ -67,7 +96,6 @@ a {
     z-index: 2;
 }
 
-/* Animation for moving nav icon to top left */
 .move-to-top-left {
     position: fixed !important;
     top: 10px !important;
@@ -77,7 +105,7 @@ a {
     transform: rotate(360deg) !important;
 }
 
-/* Navigation Icon Styles */
+/* Navigation Styles */
 .nav-icon {
     position: fixed;
     top: 10px;
@@ -95,7 +123,6 @@ a {
     transition: transform 0.5s;
 }
 
-/* Navigation Menu Styles */
 .nav-menu {
     display: none;
     position: absolute;
@@ -110,7 +137,6 @@ a {
     margin: 10px 0;
 }
 
-/* Bubble Menu Styles */
 .nav-menu li a {
     display: block;
     padding: 10px 20px;
@@ -124,44 +150,15 @@ a {
     background-color: #fbd6a1; 
 }
 
-/* Show menu on hover */
 .nav-icon:hover .nav-menu {
     display: block;
 }
 
-/* Icon Spin on Hover  */
 .nav-icon img.spinning {
     transform: rotate(360deg);
 }
 
-/* Section Styles */
-.section {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.section-content {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.section-content h1 {
-    margin: 0;
-    font-size: 48px;
-    color: #fff;
-}
-
-/* Content Section Styles */
-.content-section {
-    padding: 50px;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-}
-
+/* About page styles */
 .about-content {
     display: flex;
     flex-direction: row;
@@ -181,7 +178,210 @@ a {
 
 }
 
-/* Projects Container */
+.about-text {
+    max-width: 600px; 
+    color: #333;
+    padding: 10px; 
+    margin: 0 auto; 
+}
+
+.about-text p {
+    font-size: 16px; 
+    line-height: 1.6; 
+}
+
+.about-certifications-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.certifications-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;  
+    margin-right: 30px;
+    background-color: #fdf6e3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.skills-section {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.skill-item {
+    font-size: 12px;
+    align-items: center;
+}
+
+.skill-item img {
+    margin-bottom: 5px;
+    height: 30px;
+    width: auto;
+}
+
+.certifications-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.certification-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    justify-content: flex-start;
+    
+}
+
+.certification-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.certification-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Work Page styles */
+.work-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.work-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.company-logo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-logo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.work-details h2 {
+    margin: 0 0 5px;
+    font-size: 24px;
+    color: #333;
+}
+
+.work-details .date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.work-details ul {
+    padding-left: 20px;
+    color: #666;
+}
+
+.work-details ul li {
+    margin-bottom: 5px;
+}
+
+/* Education Page styles */
+.edu-content-section {
+    padding: 50px;
+    margin: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-photo {
+    width: auto;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo-caption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.intro-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.intro-container .education-photos,
+.intro-container .intro-text {
+    flex: 1;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+.course-item {
+    width: 100%;
+    background-color: #fdf6e3;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Projects Page styles */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -189,9 +389,8 @@ a {
     gap: 40px;
 }
 
-/* Project Item */
 .project-item {
-    flex: 1 1 calc(33.333% - 40px); 
+    flex: 1 1 calc(33.333% - 40px);
     box-sizing: border-box;
     max-width: calc(33.333% - 40px);
     background-color: #fdf6e3;
@@ -229,177 +428,6 @@ a {
 
 .github-link:hover {
     background-color: #fbd6a1;
-}
-
-
-/* education styles */
-.edu-content-section {
-    padding: 50px;
-    margin: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Photos */
-.education-photos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.photo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.education-photo {
-    width: auto;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.photo-caption {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-}
-
-/* Intro Container */
-.intro-container {
-    display: flex;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto 40px;
-}
-
-.intro-container .education-photos,
-.intro-container .intro-text {
-    flex: 1;
-}
-
-/* Courses Container */
-.courses-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-}
-
-.course-item {
-    width: 100%;
-    background-color: #fdf6e3;
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-
-/* About and Certifications Section */
-.about-certifications-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
-
-/* About Me Section */
-.about-content {
-    flex: 1;
-}
-
-/* Certifications Section */
-.certifications-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    max-width: 500px;
-    margin-left: auto;  
-    margin-right: auto;
-}
-
-/* Icon Title */
-.icon-title {
-    text-align: left;
-}
-
-/* Skills Section */
-.skills-section {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 70px;
-    margin-right: 70px;
-
-}
-
-/* Skills Container */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
-    gap: 10px;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-/* Skill Item */
-.skill-item {
-    font-size: 12px;
-    align-items: center;
-}
-
-/* Skill Item Image */
-.skill-item img {
-    margin-bottom: 5px;
-    height: 30px;
-    width: auto;
-}
-
-/* Certifications Container */
-.certifications-container {
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.certification-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    justify-content: flex-start;
-    
-}
-
-.certification-item img {
-    width: 50px;
-    height: auto;
-    margin-right: 15px;
-}
-
-.certification-item span {
-    font-size: 16px;
-    color: #333;
-}
-
-/* About Text */
-.about-text {
-    max-width: 600px; 
-    color: #333;
-    padding: 10px; 
-    margin: 0 auto; 
-}
-.about-text p {
-    font-size: 16px; 
-    line-height: 1.6; 
 }
 
 /* Inspiration Sections */
@@ -447,51 +475,6 @@ a {
     color: #666;
 }
 
-/* Work Container */
-.work-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.work-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-
-.company-logo {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.company-logo:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.work-details h2 {
-    margin: 0 0 5px;
-    font-size: 24px;
-    color: #333;
-}
-
-.work-details .date {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 10px;
-}
-
-.work-details ul {
-    padding-left: 20px;
-    color: #666;
-}
-
-.work-details ul li {
-    margin-bottom: 5px;
-}
-
 /* Footer */
 footer {
     background-color: #fdf6e3;
@@ -518,75 +501,31 @@ footer {
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 400px) {
-    .project-item {
-        flex: 1 1 100%;
+/* Responsiveness */
+
+@media screen and (max-width: 600px) {
+    .work-item {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+    .company-logo {
+        margin-bottom: 15px;
+        width: 200px;
         max-width: 100%;
+    }
+    .work-details {
+        margin-top: 10px;
     }
     .course-item {
         max-width: 100%;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .timeline-item {
-        padding: 20px 30px;
-    }
-    .timeline-item::after {
-        left: 31px;
-    }
-    .timeline-item .timeline-content {
-        margin-left: 60px;
-    }
-    .work-item {
-        flex-direction: column; 
-        align-items: center;
-        text-align: center;
-    }
-
-    .company-logo {
-        margin-bottom: 15px;
-        width: 200px;
-        max-width: 100%;
-    }
-
-    .work-details {
-        margin-top: 10px;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .project-item {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
-    .inspiration-sections {
-        flex-direction: column;
-        align-items: center;
-    }
-    .books-section, .authors-section {
-        max-width: 100%;
-    }
-    .book-item, .author-item {
-        width: 100%;
-    }
     .about-content {
         flex-direction: column; 
         align-items: center;
-    }
-    .project-item {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
-    .inspiration-sections {
-        flex-direction: column;
-        align-items: center;
-    }
-    .books-section, .authors-section {
-        max-width: 100%;
-    }
-    .book-item, .author-item {
-        width: 100%;
     }
     .headshot {
         margin-bottom: 20px;
@@ -594,28 +533,38 @@ footer {
     .about-text {
         text-align: center;  
     }
+    .intro-text {
+        margin-bottom: 20px;
+    }
     .intro-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .education-photos {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .intro-text {
-        margin-bottom: 20px;
-    }
-
     .courses-container {
         grid-template-columns: 1fr;
     }
-
     .course-item {
         max-width: 90%;
+    }
+    .inspiration-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-item {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+    .books-section, .authors-section {
+        max-width: 100%;
+    }
+    .book-item, .author-item {
+        width: 100%;
     }
 }
 
@@ -625,14 +574,19 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-
     .intro-container {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
     .courses-container {
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .project-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
     }
 }
 
@@ -640,7 +594,6 @@ footer {
     .intro-container {
         flex-direction: column;
     }
-
     .intro-text {
         order: -1; 
         margin-bottom: 20px; 
@@ -650,32 +603,26 @@ footer {
 @media (max-width: 1280px) {
     .about-certifications-container {
         flex-direction: column; 
+        align-items: center;
     }
-
     .certifications-section {
         max-width: 10000px;
         margin-bottom: 30px;
         margin-top: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        
     }
-
-    .about-certifications-container {
-        flex-direction: column; 
-    }
-
     .skills-section {
         max-width: 600px;
         padding: 20px;
         margin: auto;
         text-align: center;
     }
-
     .skills-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; 
         gap: 20px; 
-    }  
-    
+    }     
 }
-
-
